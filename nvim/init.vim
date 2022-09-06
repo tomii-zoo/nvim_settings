@@ -3,10 +3,10 @@
 
 " カラー設定
 let g:molokai_original = 1
-colorscheme molokai
+colorscheme dracula
 
 " フォント設定
-set guifont=RictyDiminished\ NF:h12
+set guifont=Ricty\ Diminished:h14
 
 " 基本設定
 set number			" 行番号表示
