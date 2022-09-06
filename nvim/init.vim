@@ -6,7 +6,7 @@ let g:molokai_original = 1
 colorscheme dracula
 
 " フォント設定
-set guifont=Ricty\ Diminished:h14
+set guifont=Ricty\ Diminished:h13
 
 " 基本設定
 set number			" 行番号表示
