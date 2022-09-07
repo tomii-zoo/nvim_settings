@@ -9,6 +9,7 @@ colorscheme dracula
 set guifont=Ricty\ Diminished:h13
 
 " 基本設定
+set mouse=a
 set fileencodings=utf-8,cp932
 set cursorline
 set number			" 行番号表示
