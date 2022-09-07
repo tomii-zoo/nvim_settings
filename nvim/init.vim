@@ -9,6 +9,8 @@ colorscheme dracula
 set guifont=Ricty\ Diminished:h13
 
 " 基本設定
+set fileencodings=utf-8,cp932
+set cursorline
 set number			" 行番号表示
 set tabstop=4		" タブの領域
 set shiftwidth=2	" 自動インデン幅
@@ -41,3 +43,14 @@ nnoremap <C-k> :split<CR> :exe("tjump ".expand('<cword>'))<CR>
 
 " 暗号化方式(CUIのみ)
 " set cryptmethod=blowfish2
+
+" スペースは次文字移動なので使わない
+" <Leader>というプレフィックスキーにスペースを使用する
+let g:mapleader = "\<Space>"
+
+" スペース + wでファイル保存
+nnoremap <Leader>w :w<CR>
+
+" スペース + . でvimrcを開く
+nnoremap <Leader>. :new C:\Users\tomii\AppData\Local\nvim\init.vim
+
