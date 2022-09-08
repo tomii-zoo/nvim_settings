@@ -1,12 +1,4 @@
 " Vim color file
-"
-" Author: Tomas Restrepo <tomas@winterdom.com>
-" https://github.com/tomasr/molokai
-"
-" Note: Based on the Monokai theme for TextMate
-" by Wimer Hazenberg and its darker variant
-" by Hamish Stuart Macpherson
-"
 
 hi clear
 
@@ -26,6 +18,12 @@ else
     let s:molokai_original = 0
 endif
 
+" --------------------------------------
+" Support for RGB-color terminal
+" --------------------------------------
+
+" Note: usualy customize
+" - hi Normal guifg=<TEXTCOLOR>, guiBg=<BGCOLOR>
 
 hi Boolean         guifg=#AE81FF
 hi Character       guifg=#E6DB74
@@ -110,7 +108,7 @@ hi TabLineFill     guifg=#1B1D1E guibg=#1B1D1E
 hi TabLine         guibg=#1B1D1E guifg=#808080 gui=none
 
 if s:molokai_original == 1
-   hi Normal          guifg=#F8F8F2 guibg=#2C2C34
+   hi Normal          guifg=#F8F8F2 guibg=#282A36
    hi Comment         guifg=#75715E
    hi CursorLine                    guibg=#3E3D32
    hi CursorLineNr    guifg=#FD971F               gui=none
@@ -131,9 +129,9 @@ else
    hi SpecialKey      guifg=#465457
 end
 
-"
+" ---------------------------------
 " Support for 256-color terminal
-"
+" ---------------------------------
 if &t_Co > 255
    if s:molokai_original == 1
       hi Normal                   ctermbg=234
