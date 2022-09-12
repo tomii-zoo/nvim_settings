@@ -67,11 +67,11 @@ call plug#begin()
 	Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
 	" Windows依存関係でうまくいかなかったのでコメントアウト
-	" Plug 'nvim-lualine/lualine.nvim'
-	" Plug 'kyazdani42/nvim-web-devicons'
+	Plug 'nvim-lualine/lualine.nvim'
+	Plug 'kyazdani42/nvim-web-devicons'
 
-	" Plug 'vim-airline/vim-airline'
-	" Plug 'vim-airline/vim-airline-themes'
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
