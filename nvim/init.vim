@@ -3,7 +3,7 @@
 
 " カラー設定
 let g:molokai_original = 1
-colorscheme dracula
+"colorscheme dracula
 
 " フォント設定
 set guifont=Ricty\ Diminished:h13
@@ -30,7 +30,7 @@ set gdefault		" 置換gオプションをデフォルト
 set clipboard=unnamed,unnamedplus
 
 " パスの区切り文字/にする
-set shellslash
+" set shellslash
 
 " 前回のカーソル位置を記憶
 if has("autocmd")
@@ -54,4 +54,27 @@ nnoremap <Leader>w :w<CR>
 
 " スペース + . でvimrcを開く
 nnoremap <Leader>. :new C:\Users\tomii\AppData\Local\nvim\init.vim
+
+" vim-plugのプラグイン達
+call plug#begin()
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'EdenEast/nightfox.nvim'
+	Plug 'tpope/vim-commentary'
+	Plug 'preservim/nerdtree'
+	Plug 'ryanoasis/vim-devicons'
+
+	Plug 'nvim-lua/plenary.nvim'
+	Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+
+	" Windows依存関係でうまくいかなかったのでコメントアウト
+	" Plug 'nvim-lualine/lualine.nvim'
+	" Plug 'kyazdani42/nvim-web-devicons'
+
+	" Plug 'vim-airline/vim-airline'
+	" Plug 'vim-airline/vim-airline-themes'
+call plug#end()
+
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
+colorscheme duskfox
 
