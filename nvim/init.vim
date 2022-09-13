@@ -1,9 +1,6 @@
-" vim tips 参考サイト様
-" http://vimblog.hatenablog.com/entry/vimrc_set_recommended_options
-
-" カラー設定
+" カラースキーム
 let g:molokai_original = 1
-"colorscheme dracula
+colorscheme dracula
 
 " フォント設定
 set guifont=Ricty\ Diminished:h13
@@ -37,23 +34,12 @@ if has("autocmd")
 	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif
 
-" ショートカットキー
-set pastetoggle=<F3>
-nnoremap <C-h> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
-nnoremap <C-k> :split<CR> :exe("tjump ".expand('<cword>'))<CR>
-
-" 暗号化方式(CUIのみ)
+" 暗号化方式
 " set cryptmethod=blowfish2
 
 " スペースは次文字移動なので使わない
 " <Leader>というプレフィックスキーにスペースを使用する
 let g:mapleader = "\<Space>"
-
-" スペース + wでファイル保存
-nnoremap <Leader>w :w<CR>
-
-" スペース + . でvimrcを開く
-nnoremap <Leader>. :new C:\Users\tomii\AppData\Local\nvim\init.vim
 
 " vim-plugのプラグイン達
 call plug#begin()
@@ -66,7 +52,6 @@ call plug#begin()
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
-	" Windows依存関係でうまくいかなかったのでコメントアウト
 	Plug 'nvim-lualine/lualine.nvim'
 	Plug 'kyazdani42/nvim-web-devicons'
 
@@ -74,7 +59,16 @@ call plug#begin()
 	Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
+" ショートカットキー
+set pastetoggle=<F3>
+nnoremap <C-h> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
+nnoremap <C-k> :split<CR> :exe("tjump ".expand('<cword>'))<CR>
+
+" スペース + wでファイル保存
+nnoremap <Leader>w :w<CR>
+
+" スペース + . でvimrcを開く
+nnoremap <Leader>. :new C:\Users\tomii\AppData\Local\nvim\init.vim
+
+" NERDTreeショートカット
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
-
-colorscheme duskfox
-
