@@ -1,3 +1,5 @@
-C:\Users\\%USERNAME%\AppData\Local\nvim
+## Windows設定例
 
-にnvimフォルダを配置するだけ。
+%LOCALAPPDATA%
+
+にnvimフォルダを配置する。
