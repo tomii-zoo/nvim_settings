@@ -1,9 +1,8 @@
 " カラースキーム
 let g:molokai_original = 1
-colorscheme dracula
 
 " フォント設定
-set guifont=Ricty\ Diminished:h13
+set guifont=Ricty\ Diminished:h12
 
 " 基本設定
 set mouse=a
@@ -44,6 +43,12 @@ let g:mapleader = "\<Space>"
 " vim-plugのプラグイン達
 call plug#begin()
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'rust-lang/rust.vim'
+	Plug 'folke/tokyonight.nvim'
+	Plug 'sainnhe/everforest'
+	Plug 'vim-airline/vim-airline'
+
+	Plug 'folke/tokyonight.nvim'
 	Plug 'EdenEast/nightfox.nvim'
 	Plug 'tpope/vim-commentary'
 	Plug 'preservim/nerdtree'
@@ -54,9 +59,10 @@ call plug#begin()
 
 	Plug 'nvim-lualine/lualine.nvim'
 	Plug 'kyazdani42/nvim-web-devicons'
-
+	Plug 'jacoborus/tender.vim'
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
+	Plug 'ayu-theme/ayu-vim'
 call plug#end()
 
 " ショートカットキー
@@ -70,5 +76,18 @@ nnoremap <Leader>w :w<CR>
 " スペース + . でvimrcを開く
 nnoremap <Leader>. :new C:\Users\tomii\AppData\Local\nvim\init.vim
 
+" 終了ショートカット
+nnoremap <BS> :q<CR>
+nnoremap <F12> :w<CR>
+
 " NERDTreeショートカット
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+let g:neovide_cursor_vfx_mode = "railgun"
+colorscheme tokyonight
